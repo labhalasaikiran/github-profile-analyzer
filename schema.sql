@@ -17,6 +17,6 @@ total_stars INT DEFAULT 0,
 total_forks INT DEFAULT 0,
 top_languages VARCHAR(500),
 account_age_days INT DEFAULT 0,
-github_joined_at DATETIME,
+github_joined_at VARCHAR(100) DEFAULT NULL,
 analyzed_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );

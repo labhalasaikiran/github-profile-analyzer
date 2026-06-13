@@ -4,6 +4,7 @@ require('dotenv').config();
 // Create a connection to MySQL database
 const db = mysql.createConnection({
   host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME
@@ -34,7 +35,7 @@ db.connect((err) => {
       total_forks   INT DEFAULT 0,
       top_languages VARCHAR(500),
       account_age_days INT DEFAULT 0,
-      github_joined_at VARCHAR(100),
+      github_joined_at VARCHAR(100) DEFAULT NULL,
       analyzed_at   DATETIME DEFAULT CURRENT_TIMESTAMP
     )
   `;
